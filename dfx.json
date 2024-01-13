@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "consensUs_backend": {
+      "main": "src/consensUs_backend/main.mo",
+      "type": "motoko"
+    },
+    "consensUs_frontend": {
+      "dependencies": [
+        "consensUs_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/consensUs_frontend/src/index.html"
+      },
+      "source": [
+        "src/consensUs_frontend/assets",
+        "dist/consensUs_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
