@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Sign Up</title>
+  <title>Login</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome Icons -->
@@ -21,24 +21,17 @@
       margin: 50px auto;
     }
 
-    .signup-form {
+    .login-form {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .signup-form h2 {
-      text-align: center;
-      /* color: #28a745; */
-      font-weight: bold; /* Added font-weight */
-      font-size: 24px; /* Increased font size */
-    }
-
-    .signup-form p.text-muted {
+    .login-form h2 {
       text-align: center;
       font-weight: bold;
-      color: #28a745;
+      font-size: 24px;
     }
 
     .form-group {
@@ -58,6 +51,7 @@
     .btn-green {
       background-color: #28a745;
       color: #fff;
+     
     }
 
     .btn-green:hover {
@@ -73,15 +67,10 @@
 <body>
 
   <div class="container">
-    <div class="signup-form">
-      <h2 >Sign up to <span style="color: #28a745;">ConsensUs</span></h2>
+    <div class="login-form">
+      <h2>Log in to <span style="color: #28a745;">consensUs</span></h2>
 
       <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Your Name">
-        </div>
-
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" id="username" placeholder="Your Username">
@@ -94,21 +83,14 @@
 
         <div class="form-group">
           <label for="consensus-code">Consensus Code</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="consensus-code" placeholder="Enter Consensus Code">
-            <div class="input-group-append">
-              <button class="btn btn-green" type="button">Generate</button>
-            </div>
-          </div>
+          <input type="text" class="form-control" id="consensus-code" placeholder="Enter Consensus Code">
         </div>
 
-       
         <div class="form-group">
-          <button type="submit" class="btn btn-green btn-block">Sign Up</button>
+          <button type="submit" class="btn btn-green btn-block"><a href="proposalOptions.html">Log In</a></button>
         </div>
-        <div class="form-group consensus-code">
-          <p>Already have an account?<a href="login.html" style="color: #28a745;"> Log In</span></p>
-        </div>
+
+        <p>Don't have an account?<a href="index.html" style="color: #28a745;"> Sign In</a></p>
       </form>
     </div>
   </div>

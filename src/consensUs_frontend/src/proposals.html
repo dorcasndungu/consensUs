@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Proposal Views</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      width: 80%; /* Set container width to 80% of viewport width */
+      max-width: 900px; /* Set max-width for responsiveness */
+    }
+
+    /* First view styles */
+    .proposal-form {
+      border: 1px solid #ced4da;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: #fff;
+      width: 45%; /* Adjusted width */
+    }
+
+    .proposal-form input,
+    .proposal-form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .proposal-form button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Second view styles */
+    .proposals-view {
+      border: 1px solid #ced4da;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: #fff;
+      width: 45%; /* Adjusted width */
+    }
+
+    .proposal-card {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- First view: Proposal Form -->
+    <div class="proposal-form">
+      <h2>Propose New Idea</h2>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+          <label for="body">Body</label>
+          <textarea class="form-control" id="body" rows="6" placeholder="Enter body"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green btn-block">Propose</button>
+      </form>
+    </div>
+
+    <!-- Second view: Proposals View -->
+    <div class="proposals-view">
+      <h2>Proposals</h2>
+      <!-- Sample proposal cards -->
+      <div class="proposal-card">
+        <h5>Proposal 1</h5>
+        <p>Proposal description goes here.</p>
+      </div>
+      <div class="proposal-card">
+        <h5>Proposal 2</h5>
+        <p>Another proposal description goes here.</p>
+      </div>
+      <!-- Add more proposal cards as needed -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
