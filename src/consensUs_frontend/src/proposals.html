@@ -12,7 +12,7 @@
   <!-- Custom CSS -->
   <style>
     body {
-      background-color: #f8f9fa;
+      color: #fff; /* White text color */
       font-family: 'Arial', sans-serif;
       margin: 0;
       display: flex;
@@ -28,37 +28,18 @@
       max-width: 900px; /* Set max-width for responsiveness */
     }
 
-    /* First view styles */
-    .proposal-form {
+    /* Proposal views styles */
+    .proposal-view {
       border: 1px solid #ced4da;
       border-radius: 20px;
       padding: 20px;
       background-color: #fff;
       width: 45%; /* Adjusted width */
+      margin: 10px;
     }
 
-    .proposal-form input,
-    .proposal-form textarea {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .proposal-form button {
-      background-color: #28a745;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Second view styles */
-    .proposals-view {
-      border: 1px solid #ced4da;
-      border-radius: 20px;
-      padding: 20px;
-      background-color: #fff;
-      width: 45%; /* Adjusted width */
+    .proposal-view h2 {
+      color: #070707; /* Green heading color */
     }
 
     .proposal-card {
@@ -66,6 +47,33 @@
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .proposal-card h5 {
+      color: #28a745; /* Green title color */
+      margin-bottom: 0;
+    }
+
+    .vote-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    .upvote,
+    .downvote {
+      font-size: 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #28a745; /* Green vote button color */
+    }
+
+    .vote-count {
+      margin-left: 5px;
+      font-size: 14px;
+      color: #495057; /* Grey vote count color */
     }
   </style>
 </head>
@@ -73,43 +81,85 @@
 <body>
 
   <div class="container">
-    <!-- First view: Proposal Form -->
-    <div class="proposal-form">
-      <h2>Propose New Idea</h2>
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="title" placeholder="Enter title">
+    <!-- First view: Pending Proposals View -->
+    <div class="proposal-view">
+      <h2>Pending Proposals</h2>
+      <!-- Sample pending proposal cards -->
+      <div class="proposal-card">
+        <div>
+          <h5>Pending Proposal 1</h5>
+          <p>Pending proposal description goes here.</p>
         </div>
-        <div class="form-group">
-          <label for="body">Body</label>
-          <textarea class="form-control" id="body" rows="6" placeholder="Enter body"></textarea>
+        <div class="vote-buttons">
+          <i class="fas fa-thumbs-up upvote" onclick="vote('up', 1)"></i>
+          <span id="upvoteCount1" class="vote-count">0</span>
+          <i class="fas fa-thumbs-down downvote" onclick="vote('down', 1)"></i>
+          <span id="downvoteCount1" class="vote-count">0</span>
         </div>
-        <button type="submit" class="btn btn-green btn-block">Propose</button>
-      </form>
+      </div>
+      <div class="proposal-card">
+        <div>
+          <h5>Pending Proposal 2</h5>
+          <p>Another pending proposal description goes here.</p>
+        </div>
+        <div class="vote-buttons">
+          <i class="fas fa-thumbs-up upvote" onclick="vote('up', 2)"></i>
+          <span id="upvoteCount2" class="vote-count">0</span>
+          <i class="fas fa-thumbs-down downvote" onclick="vote('down', 2)"></i>
+          <span id="downvoteCount2" class="vote-count">0</span>
+        </div>
+      </div>
+      <!-- Add more pending proposal cards as needed -->
     </div>
 
-    <!-- Second view: Proposals View -->
-    <div class="proposals-view">
-      <h2>Proposals</h2>
-      <!-- Sample proposal cards -->
+    <!-- Second view: Approved Proposals View -->
+    <div class="proposal-view">
+      <h2>Approved Proposals</h2>
+      <!-- Sample approved proposal cards -->
       <div class="proposal-card">
-        <h5>Proposal 1</h5>
-        <p>Proposal description goes here.</p>
+        <h5>Approved Proposal 1</h5>
+        <p>Approved proposal description goes here.</p>
       </div>
       <div class="proposal-card">
-        <h5>Proposal 2</h5>
-        <p>Another proposal description goes here.</p>
+        <h5>Approved Proposal 2</h5>
+        <p>Another approved proposal description goes here.</p>
       </div>
-      <!-- Add more proposal cards as needed -->
+      <!-- Add more approved progit posal cards as needed -->
     </div>
   </div>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Voting logic
+  var votes = {
+    1: { upvotes: 0, downvotes: 0 },
+    2: { upvotes: 0, downvotes: 0 },
+    // Add more entries as needed for each proposal
+  };
 
+  function vote(type, proposalId) {
+    var upvoteCount = document.getElementById("upvoteCount" + proposalId);
+    var downvoteCount = document.getElementById("downvoteCount" + proposalId);
+    var upvoteIcon = document.getElementById("upvoteIcon" + proposalId);
+
+    if (upvoteIcon.classList.contains("disabled")) {
+      return; // Exit the function if the icon is disabled
+    }
+
+    if (type === 'up') {
+      votes[proposalId].upvotes += 1;
+      upvoteIcon.classList.add("disabled"); // Disable the upvote icon
+    } else if (type === 'down') {
+      votes[proposalId].downvotes += 1;
+    }
+
+    upvoteCount.innerText = votes[proposalId].upvotes;
+    downvoteCount.innerText = votes[proposalId].downvotes;
+  }
+</script>
 </body>
 
 </html>
