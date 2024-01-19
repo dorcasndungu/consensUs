@@ -1,4 +1,8 @@
 # consensUs
+![Screenshot from 2024-01-14 13-24-36](https://github.com/dorcasndungu/consensUs/assets/93251516/128c7da0-5e22-490d-9ca4-2248d06492f9)
+![Screenshot from 2024-01-14 13-24-52](https://github.com/dorcasndungu/consensUs/assets/93251516/de2f77e2-3304-4adb-861f-af438e129909)
+![Screenshot from 2024-01-14 13-25-08](https://github.com/dorcasndungu/consensUs/assets/93251516/57851fc6-1848-4e36-ba4b-97e09a885820)
+![Screenshot from 2024-01-14 13-25-18](https://github.com/dorcasndungu/consensUs/assets/93251516/09627116-73c9-488e-a9fc-df061c589765)
 
 This is consensUs project, a DAO project that can be used to enhance transparency in the construction industry.
 This is done by the construction supervisors who upload a future construction process as a proposal which is then voted by the stakeholders and depending on the votes, the process can be passed or modified, involving everyone.
