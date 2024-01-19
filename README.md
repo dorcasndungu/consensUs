@@ -1,28 +1,13 @@
 # consensUs
 
-Welcome to your new consensUs project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+This is consensUs project, a DAO project that can be used to enhance transparency in the construction industry.
+This is done by the construction supervisors who upload a future construction process as a proposal which is then voted by the stakeholders and depending on the votes, the process can be passed or modified, involving everyone.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with consensUs, see the following documentation available online:
-
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/quickstart/hello10mins)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/references/motoko-ref/)
-- [JavaScript API Reference](https://erxue-5aaaa-aaaab-qaagq-cai.raw.icp0.io)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd consensUs/
-dfx help
-dfx canister --help
-```
+ ![image](src/consensUs_frontend/assets/Screenshot from 2024-01-14 13-25-08.png)
 
 ## Running the project locally
 
-If you want to test your project locally, you can use the following commands:
+To test your project locally, you can use the following commands:
 
 ```bash
 # Starts the replica, running in the background
@@ -32,7 +17,7 @@ dfx start --background
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+Once the job completes, the application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
 
 If you have made changes to your backend canister, you can generate a new candid interface with
 
