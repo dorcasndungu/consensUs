@@ -3,7 +3,6 @@
 This is consensUs project, a DAO project that can be used to enhance transparency in the construction industry.
 This is done by the construction supervisors who upload a future construction process as a proposal which is then voted by the stakeholders and depending on the votes, the process can be passed or modified, involving everyone.
 
- ![image](src/consensUs_frontend/assets/Screenshot from 2024-01-14 13-25-08.png)
 
 ## Running the project locally
 
